@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Lista de Montagens -->
+    <RecyclerView
+        android:id="@+id/recyclerViewMontagens"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/buttonIniciar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <!-- Botão para iniciar contagem -->
+    <Button
+        android:id="@+id/buttonIniciar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Iniciar Montagem"
+        app:layout_constraintTop_toBottomOf="@id/recyclerViewMontagens"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <!-- Contagem de Tempo -->
+    <TextView
+        android:id="@+id/textViewTempo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00:00"
+        android:textSize="24sp"
+        app:layout_constraintTop_toBottomOf="@id/buttonIniciar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <!-- Botão para anexar imagem -->
+    <Button
+        android:id="@+id/buttonAnexarImagem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Anexar Imagem"
+        app:layout_constraintTop_toBottomOf="@id/textViewTempo"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <!-- Exibição da Imagem Anexada -->
+    <ImageView
+        android:id="@+id/imageViewMontagem"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:layout_constraintTop_toBottomOf="@id/buttonAnexarImagem"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
